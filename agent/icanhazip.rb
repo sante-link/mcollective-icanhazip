@@ -8,7 +8,7 @@ module MCollective
       end
       [ 'ipv4', 'ipv6' ].each do |version|
         action version do
-	  reply[:address] = Net::HTTP.get(URI("http://#{version}.icanhazip.com/")).chomp
+          reply[:address] = Net::HTTP.get(URI("http://#{version}.icanhazip.com/")).chomp
         end
       end
     end
