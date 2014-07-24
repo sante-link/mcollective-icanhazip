@@ -11,7 +11,7 @@ action "ip", :description => 'Echos the IP address of the host' do
   display :always
   output :address,
          :description => 'The IP address of the host',
-         :display_as  => 'Message'
+         :display_as  => 'IP address'
 end
 
 [ 'ipv4', 'ipv6' ].each do |version|
@@ -19,6 +19,6 @@ end
     display :always
     output :address,
            :description => "The IP#{version[2..3]} address of the host",
-           :display_as  => 'Message'
+           :display_as  => "IP#{version[2..3]} address"
   end
 end
